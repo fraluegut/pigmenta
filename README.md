@@ -1,8 +1,26 @@
 # Pigmenta
 
+[![CI](https://github.com/fraluegut/pigmenta/actions/workflows/ci.yml/badge.svg)](https://github.com/fraluegut/pigmenta/actions/workflows/ci.yml)
+[![core/ coverage](https://img.shields.io/badge/core%2F%20coverage-100%25%20lines-brightgreen)](docs/TESTING.md)
+[![License: GPLv3](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
+
 Rock-art / petroglyph image enhancement: decorrelation stretch, CLAHE,
 relief shading and other DStretch-style filters, built on a single shared
 C++ engine and usable from Android, the command line, or a desktop GUI.
+
+## Examples
+
+Generated with `pigmenta-cli` from the sample images in [desktop/samples/](desktop/samples/)
+(credits in [desktop/samples/CREDITS.md](desktop/samples/CREDITS.md)).
+
+| | |
+|---|---|
+| ![YDS decorrelation](docs/screenshots/huashan.jpg) | ![LDS decorrelation](docs/screenshots/zuojiang.jpg) |
+| ![CLAHE](docs/screenshots/thailand.jpg) | ![Relief shading](docs/screenshots/paraguay.jpg) |
+
+```sh
+./build/cli/pigmenta-cli in.jpg out.png --filter decorrelation --colorspace ycbcr --std 50 --intensity 1.0
+```
 
 ## Repository layout
 
