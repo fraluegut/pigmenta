@@ -8,7 +8,15 @@ Rock-art / petroglyph image enhancement: decorrelation stretch, CLAHE,
 relief shading and other DStretch-style filters, built on a single shared
 C++ engine and usable from Android, the command line, or a desktop GUI.
 
-## Examples
+## Desktop GUI
+
+![Pigmenta desktop — loading an image, applying Decorrelation Stretch, tuning parameters, comparing side by side](docs/screenshots/demo.gif)
+
+| | |
+|---|---|
+| ![Decorrelation Stretch applied](docs/screenshots/app_decorrelation.jpg) | ![Before/after side-by-side compare](docs/screenshots/app_sidebyside.jpg) |
+
+## Filter examples
 
 Generated with `pigmenta-cli` from the sample images in [desktop/samples/](desktop/samples/)
 (credits in [desktop/samples/CREDITS.md](desktop/samples/CREDITS.md)).
