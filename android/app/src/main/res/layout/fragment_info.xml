@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_title"
+            android:textColor="@color/accent_amber"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_subtitle"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ORIGINAL -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_surface"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Original" android:textColor="@color/accent_amber"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingMultiplier="1.5"
+                    android:text="Muestra la imagen original tal y como fue capturada, sin ningún procesamiento. Útil como referencia para comparar el efecto de los filtros." />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- YDS -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_surface"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="YDS — Decorrelación YCbCr" android:textColor="@color/accent_amber"
+                        android:textSize="16sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="RECOMENDADO" android:textColor="@color/bg_dark" android:textSize="9sp"
+                        android:background="#FFB300" android:paddingHorizontal="6dp" android:paddingVertical="2dp" />
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingMultiplier="1.5"
+                    android:text="Convierte la imagen al espacio de color YCbCr (luminancia + crominancia azul/rojo) y aplica un estiramiento de decorrelación estadística (tipo DStretch) sobre los canales de crominancia. Elimina la correlación entre canales, amplificando diferencias sutiles de tono. Excelente para detectar ocres rojos, amarillos y naranjas en pinturas rupestres." />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- LDS -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_surface"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="LDS — Decorrelación Lab" android:textColor="@color/accent_amber"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingMultiplier="1.5"
+                    android:text="Opera en el espacio perceptualmente uniforme CIE L*a*b*. El canal L* conserva la luminancia mientras a* (verde↔rojo) y b* (azul↔amarillo) son estirados decorrelados. Más fiel a la percepción humana del color. Útil para diferenciar pigmentos cuando la variación de color es sutil." />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- YRD -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_surface"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="YRD — Yellows &amp; Reds" android:textColor="@color/accent_amber"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingMultiplier="1.5"
+                    android:text="Variante de decorrelación optimizada para el rango cálido del espectro (amarillos, naranjas, rojos). Pondera los canales para maximizar el contraste en longitudes de onda entre 580–700 nm, correspondientes a goethita, hematita y limonita, minerales comunes en pinturas rupestres." />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- VDS -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_surface"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="VDS — Violets &amp; Purples" android:textColor="@color/accent_amber"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingMultiplier="1.5"
+                    android:text="Decorrelación especializada en el rango violeta-azul (400–500 nm). Especialmente sensible a pigmentos de manganeso (MnO₂), carbón vegetal y óxidos de hierro oscuros. Útil para grabados y pinturas con tonos fríos o muy degradados por el tiempo." />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- CDS -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_surface"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="CDS — Decorrelación RGB directa" android:textColor="@color/accent_amber"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingMultiplier="1.5"
+                    android:text="Aplica la decorrelación directamente sobre los canales R, G, B sin cambio de espacio de color. Calcula la matriz de covarianza de los tres canales, la diagonaliza y estira cada componente principal por separado. Produce resultados muy saturados y de alto contraste. Útil como análisis exploratorio general, aunque puede generar artefactos en imágenes con ruido." />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- CLAHE -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_surface"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="CLAHE — Ecualización adaptativa de contraste" android:textColor="@color/accent_amber"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingMultiplier="1.5"
+                    android:text="Contrast-Limited Adaptive Histogram Equalization. Divide la imagen en teselas (por defecto 8×8) y ecualiza el histograma de cada una por separado, limitando la amplificación máxima (clipLimit) para evitar ruido excesivo. Opera sobre el canal L* (luminancia) en Lab o V en HSV. Ideal para revelar grabados y texturas en imágenes con iluminación no uniforme." />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- IR -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_surface"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="IR — Simulación infrarrojo cercano" android:textColor="@color/accent_amber"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingMultiplier="1.5"
+                    android:text="Simula la respuesta de una cámara en el infrarrojo cercano (NIR, ~750–900 nm) a partir de los canales RGB visibles. Los óxidos de hierro (hematita, goethita) tienen una reflectancia NIR característica diferente de la roca de fondo. Puede revelar trazos que son prácticamente invisibles bajo luz visible normal." />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Saturation -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_surface"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Saturación — Amplificación de color" android:textColor="@color/accent_amber"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingMultiplier="1.5"
+                    android:text="Incrementa la saturación de la imagen en el espacio HSV. Multiplica el canal S por un factor proporcional a la intensidad seleccionada (hasta ×4). Sencillo pero efectivo para hacer más visibles pigmentos de colores en imágenes con baja saturación por condiciones de luz difusa o degradación." />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Gamma -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_surface"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Gamma — Corrección de sombras" android:textColor="@color/accent_amber"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingMultiplier="1.5"
+                    android:text="Aplica una curva de potencia (pixel_out = pixel_in ^ γ) con γ &lt; 1 (por defecto 0,45) para aclarar las zonas oscuras de la imagen manteniendo los tonos claros. Útil cuando el pigmento está en zonas en sombra o la fotografía fue tomada con poca luz." />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Relief -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/bg_surface"
+            app:cardCornerRadius="12dp"
+            android:layout_marginBottom="24dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Relief — Sombreado de relieve" android:textColor="@color/accent_amber"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary" android:textSize="13sp" android:lineSpacingMultiplier="1.5"
+                    android:text="Simula la iluminación rasante (luz lateral) calculando el gradiente de la imagen y proyectando una fuente de luz a 315° (noroeste por defecto). Convierte la imagen a escala de grises y aplica un kernel de Sobel direccional. Especialmente útil para petroglífos y grabados donde el relieve es la forma de expresión, revelando incisiones que no contienen pigmento." />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+

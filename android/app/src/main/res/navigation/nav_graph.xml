@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.pigmenta.app.ui.welcome.WelcomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcome_to_camera"
+            app:destination="@id/cameraFragment"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- FASE 1: Captura (cámara + sensores) -->
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.pigmenta.app.ui.camera.CameraFragment"
+        android:label="Captura"
+        tools:layout="@layout/fragment_camera">
+        <action
+            android:id="@+id/action_camera_to_processing"
+            app:destination="@id/processingFragment" />
+    </fragment>
+
+    <!-- FASE 2: Filtros -->
+    <fragment
+        android:id="@+id/processingFragment"
+        android:name="com.pigmenta.app.ui.processing.ProcessingFragment"
+        android:label="Filtros"
+        tools:layout="@layout/fragment_processing">
+        <argument
+            android:name="imageUri"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_processing_to_report"
+            app:destination="@id/reportFragment" />
+    </fragment>
+
+    <!-- FASE 3: Informe / Ficha de campo -->
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.pigmenta.app.ui.report.ReportFragment"
+        android:label="Informe"
+        tools:layout="@layout/fragment_report" />
+
+    <!-- Pestañas del menú inferior -->
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.pigmenta.app.ui.gallery.GalleryFragment"
+        android:label="Galería"
+        tools:layout="@layout/fragment_gallery">
+        <action
+            android:id="@+id/action_gallery_to_processing"
+            app:destination="@id/processingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.pigmenta.app.ui.info.InfoFragment"
+        android:label="Info"
+        tools:layout="@layout/fragment_info" />
+
+    <fragment
+        android:id="@+id/creditsFragment"
+        android:name="com.pigmenta.app.ui.credits.CreditsFragment"
+        android:label="Créditos"
+        tools:layout="@layout/fragment_credits" />
+
+</navigation>

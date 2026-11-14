@@ -1,0 +1,55 @@
+# ─────────────────────────────────────────────
+#  Pigmenta — root .gitignore
+# ─────────────────────────────────────────────
+
+# CMake (core/, cli/, top-level build/)
+build/
+build-*/
+**/.cxx/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+
+# Compiled objects / libs / binaries
+*.o
+*.so
+*.a
+*.dylib
+*.dll
+pigmenta-cli
+
+# Gradle (android/, desktop/)
+.gradle/
+**/build/
+**/generated/
+gradle/wrapper/gradle-wrapper.jar
+
+# Android
+local.properties
+*.properties.local
+captures/
+*.apk
+*.aab
+*.keystore
+*.jks
+keystore.properties
+release-signing.properties
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+*.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.orig
+
+# Logs
+*.log
+hs_err_pid*

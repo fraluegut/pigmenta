@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pigmenta</string>
+    <string name="nav_camera">Cámara</string>
+    <string name="nav_gallery">Galería</string>
+    <string name="btn_save">Guardar</string>
+    <string name="btn_online">Online</string>
+    <string name="btn_discard">Descartar</string>
+    <string name="btn_continue">Continuar →</string>
+    <string name="export_failed">Error al guardar imagen</string>
+    <string name="burst_btn_desc">Captura burst</string>
+    <string name="preview_desc">Vista previa de imagen</string>
+    <string name="processed_image_desc">Imagen procesada</string>
+    <string name="gallery_empty">No hay imágenes procesadas.\n¡Captura una foto y aplica un filtro!</string>
+    <string name="permission_required">Se necesita permiso de cámara para capturar fotos.</string>
+    <string name="filter_intensity">Intensidad</string>
+    <string name="camera_error">Error al iniciar la cámara</string>
+    <string name="camera_permission_denied">Se necesita permiso de cámara para usar esta función.</string>
+    <string name="saved_ok">Guardado en galería ✓</string>
+
+    <!-- Credits -->
+    <string name="menu_about">Acerca de</string>
+    <string name="credits_title">Acerca de Pigmenta</string>
+    <string name="credits_description">Pigmenta es una herramienta de análisis visual para el estudio de pinturas rupestres y pigmentos históricos mediante filtros espectrales.</string>
+    <string name="credits_developer_label">Desarrollador</string>
+    <string name="credits_developer_name">Javier Luengo Gutiérrez</string>
+    <string name="credits_email">javierluengogutierrez@gmail.com</string>
+    <string name="credits_github_label">Repositorio</string>
+    <string name="credits_github_url">github.com</string>
+    <string name="credits_version_label">Versión</string>
+    <string name="credits_close">Cerrar</string>
+
+    <!-- Burst -->
+    <string name="burst_capturing">Capturando ráfaga %1$d/%2$d…</string>
+    <string name="burst_done">Ráfaga completada: %1$d frames guardados</string>
+    <string name="burst_error">Error en ráfaga: %1$s</string>
+    <string name="burst_raw_label">RAW</string>
+    <string name="burst_yuv_label">YUV</string>
+    <string name="burst_no_camera">Cámara no disponible</string>
+
+    <!-- Navigation -->
+    <string name="nav_filters">Filtros</string>
+    <string name="nav_info">Info</string>
+    <string name="nav_credits">Créditos</string>
+
+    <!-- Welcome -->
+    <string name="welcome_tagline">Revela lo invisible</string>
+    <string name="welcome_description">Pigmenta aplica filtros espectrales avanzados a fotografías de paredes y superficies rocosas para hacer visibles pinturas rupestres y pigmentos históricos difíciles de percibir a simple vista.</string>
+    <string name="welcome_btn_enter">Comenzar</string>
+
+    <!-- Info -->
+    <string name="info_title">Guía de filtros</string>
+    <string name="info_subtitle">Descripción técnica de cada filtro disponible en Pigmenta</string>
+
+    <!-- Report / Ficha de campo -->
+    <string name="report_title">📋 Ficha de registro</string>
+    <string name="report_section_metadata">Datos de captura</string>
+    <string name="report_section_notes">Anotaciones</string>
+    <string name="report_field_site">Yacimiento / Cueva</string>
+    <string name="report_field_researcher">Investigador</string>
+    <string name="report_field_notes">Observaciones</string>
+    <string name="report_btn_send">Enviar informe</string>
+    <string name="report_btn_save">💾 Guardar</string>
+    <string name="report_saving">Guardando…</string>
+    <string name="report_saved_ok">✓ Guardado en galería</string>
+    <string name="report_no_image">Primero aplica un filtro en la fase de Edición</string>
+    <!-- Gallery detail -->
+    <string name="gallery_detail_download_img">📥 Foto</string>
+    <string name="gallery_detail_download_all">📋 Todo</string>
+    <string name="gallery_detail_reedit">🔬 Re-editar</string>
+    <string name="gallery_detail_saved">Imagen guardada en galería ✓</string>
+    <string name="gallery_detail_all_copied">Imagen guardada + ficha copiada ✓</string>
+    <string name="report_dialog_title">Envío de informe</string>
+    <string name="report_dialog_message">En futuras actualizaciones este envío se realizará a la nube y quedará registrado en la base de datos del proyecto.\n\nPor ahora puedes copiar la ficha al portapapeles para compartirla manualmente.</string>
+    <string name="report_dialog_ok">Entendido</string>
+    <string name="report_dialog_copy">Copiar ficha</string>
+    <string name="report_copied">Ficha copiada al portapapeles ✓</string>
+</resources>

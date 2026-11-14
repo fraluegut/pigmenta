@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Pigmenta launcher icon — ciervo rupestre con glow ámbar sobre fondo oscuro.
+  Canvas: 108×108dp (adaptive icon foreground).
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- ── Fondo circular oscuro (simulación piedra) ──────────────────────── -->
+    <path
+        android:fillColor="#120700"
+        android:pathData="M54,54 m-54,0 a54,54 0,1,0 108,0 a54,54 0,1,0 -108,0" />
+
+    <!-- Manchas de textura roca -->
+    <path android:fillColor="#0C0300" android:pathData="M30,26 Q42,21 53,29 Q46,37 35,34 Z" />
+    <path android:fillColor="#0C0300" android:pathData="M60,63 Q72,57 80,65 Q73,71 64,69 Z" />
+    <path android:fillColor="#0C0300" android:pathData="M20,52 Q29,46 38,53 Q32,61 24,59 Z" />
+    <path android:fillColor="#0A0200" android:pathData="M46,77 Q56,73 63,80 Q57,85 49,83 Z" />
+
+    <!-- ── Anillo de fuego ────────────────────────────────────────────────── -->
+    <!-- Halo difuminado exterior -->
+    <path android:fillColor="#00000000" android:strokeColor="#20FF5500"
+        android:strokeWidth="11"
+        android:pathData="M54,54 m-51,0 a51,51 0,1,0 102,0 a51,51 0,1,0 -102,0" />
+    <!-- Glow exterior -->
+    <path android:fillColor="#00000000" android:strokeColor="#50FF7700"
+        android:strokeWidth="7"
+        android:pathData="M54,54 m-49,0 a49,49 0,1,0 98,0 a49,49 0,1,0 -98,0" />
+    <!-- Glow medio -->
+    <path android:fillColor="#00000000" android:strokeColor="#AAEE8800"
+        android:strokeWidth="4.5"
+        android:pathData="M54,54 m-47,0 a47,47 0,1,0 94,0 a47,47 0,1,0 -94,0" />
+    <!-- Línea core del anillo -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFDD9900"
+        android:strokeWidth="2"
+        android:pathData="M54,54 m-46,0 a46,46 0,1,0 92,0 a46,46 0,1,0 -92,0" />
+    <!-- Brillo interior -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FFEE00"
+        android:strokeWidth="1"
+        android:pathData="M54,54 m-45,0 a45,45 0,1,0 90,0 a45,45 0,1,0 -90,0" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+    <!--                  C I E R V O  R U P E S T R E                     -->
+    <!--  Pose: cuerpo horizontal mirando a la derecha, cuernas ramificadas -->
+    <!-- ═══════════════════════════════════════════════════════════════════ -->
+
+    <!-- CUERPO — glow ancho -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="8" android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:pathData="M21,63 C22,50 35,45 52,46 C65,47 76,53 77,62 C78,71 71,77 56,77 C41,77 20,74 21,63 Z" />
+    <!-- CUERPO — línea core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="2.8" android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:pathData="M21,63 C22,50 35,45 52,46 C65,47 76,53 77,62 C78,71 71,77 56,77 C41,77 20,74 21,63 Z" />
+
+    <!-- CUELLO — glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="7" android:strokeLineCap="round"
+        android:pathData="M71,53 C73,46 76,40 78,36" />
+    <!-- CUELLO — core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="2.5" android:strokeLineCap="round"
+        android:pathData="M71,53 C73,46 76,40 78,36" />
+
+    <!-- CABEZA — glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="7" android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:pathData="M78,36 C82,32 90,33 90,39 C90,45 82,48 78,44 C74,42 74,37 78,36 Z" />
+    <!-- CABEZA — core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round"
+        android:pathData="M78,36 C82,32 90,33 90,39 C90,45 82,48 78,44 C74,42 74,37 78,36 Z" />
+
+    <!-- CUERNA IZQUIERDA — tronco glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="6" android:strokeLineCap="round"
+        android:pathData="M78,35 C75,27 70,20 66,12" />
+    <!-- core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="2.2" android:strokeLineCap="round"
+        android:pathData="M78,35 C75,27 70,20 66,12" />
+
+    <!-- CUERNA IZQ — rama 1 glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="5" android:strokeLineCap="round"
+        android:pathData="M73,23 C77,19 82,16 86,13" />
+    <!-- core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="1.8" android:strokeLineCap="round"
+        android:pathData="M73,23 C77,19 82,16 86,13" />
+
+    <!-- CUERNA IZQ — rama 2 glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="4.5" android:strokeLineCap="round"
+        android:pathData="M69,17 C73,13 76,10 79,7" />
+    <!-- core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="1.8" android:strokeLineCap="round"
+        android:pathData="M69,17 C73,13 76,10 79,7" />
+
+    <!-- CUERNA DERECHA — tronco glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="6" android:strokeLineCap="round"
+        android:pathData="M80,34 C84,25 88,18 91,11" />
+    <!-- core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="2.2" android:strokeLineCap="round"
+        android:pathData="M80,34 C84,25 88,18 91,11" />
+
+    <!-- CUERNA DER — rama 1 glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="5" android:strokeLineCap="round"
+        android:pathData="M86,20 C91,17 95,15 98,13" />
+    <!-- core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="1.8" android:strokeLineCap="round"
+        android:pathData="M86,20 C91,17 95,15 98,13" />
+
+    <!-- CUERNA DER — rama 2 glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="4" android:strokeLineCap="round"
+        android:pathData="M89,14 C92,11 95,8 97,6" />
+    <!-- core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="1.6" android:strokeLineCap="round"
+        android:pathData="M89,14 C92,11 95,8 97,6" />
+
+    <!-- PATA DELANTERA 1 — glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="6" android:strokeLineCap="round"
+        android:pathData="M62,75 C61,82 60,88 59,94" />
+    <!-- core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="2.2" android:strokeLineCap="round"
+        android:pathData="M62,75 C61,82 60,88 59,94" />
+
+    <!-- PATA DELANTERA 2 — glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="6" android:strokeLineCap="round"
+        android:pathData="M70,73 C70,80 69,86 69,92" />
+    <!-- core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="2.2" android:strokeLineCap="round"
+        android:pathData="M70,73 C70,80 69,86 69,92" />
+
+    <!-- PATA TRASERA 1 — glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="6" android:strokeLineCap="round"
+        android:pathData="M27,72 C25,79 23,85 21,91" />
+    <!-- core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="2.2" android:strokeLineCap="round"
+        android:pathData="M27,72 C25,79 23,85 21,91" />
+
+    <!-- PATA TRASERA 2 — glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="6" android:strokeLineCap="round"
+        android:pathData="M36,74 C35,81 34,87 33,93" />
+    <!-- core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="2.2" android:strokeLineCap="round"
+        android:pathData="M36,74 C35,81 34,87 33,93" />
+
+    <!-- COLA — glow -->
+    <path android:fillColor="#00000000" android:strokeColor="#55FF9400"
+        android:strokeWidth="6" android:strokeLineCap="round"
+        android:pathData="M21,61 C15,57 11,58 9,63" />
+    <!-- core -->
+    <path android:fillColor="#00000000" android:strokeColor="#FFEE8800"
+        android:strokeWidth="2.2" android:strokeLineCap="round"
+        android:pathData="M21,61 C15,57 11,58 9,63" />
+
+    <!-- ── Chispas / destellos decorativos ───────────────────────────────── -->
+    <path android:fillColor="#BBFF9900"
+        android:pathData="M46,7 m-1.5,0 a1.5,1.5 0,1,0 3,0 a1.5,1.5 0,1,0 -3,0" />
+    <path android:fillColor="#99FF8800"
+        android:pathData="M97,44 m-1.2,0 a1.2,1.2 0,1,0 2.4,0 a1.2,1.2 0,1,0 -2.4,0" />
+    <path android:fillColor="#88FF9900"
+        android:pathData="M10,38 m-1,0 a1,1 0,1,0 2,0 a1,1 0,1,0 -2,0" />
+    <path android:fillColor="#77FF8800"
+        android:pathData="M16,77 m-0.8,0 a0.8,0.8 0,1,0 1.6,0 a0.8,0.8 0,1,0 -1.6,0" />
+    <path android:fillColor="#66FFAA00"
+        android:pathData="M56,100 m-1,0 a1,1 0,1,0 2,0 a1,1 0,1,0 -2,0" />
+
+</vector>

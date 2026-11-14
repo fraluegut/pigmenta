@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="logo.png">logo.png</file>
+        <file alias="samples/huashan_1.jpg">../samples/huashan_1.jpg</file>
+        <file alias="samples/zuojiang_huashan_2.jpg">../samples/zuojiang_huashan_2.jpg</file>
+        <file alias="samples/thailand_petroglyph.jpg">../samples/thailand_petroglyph.jpg</file>
+        <file alias="samples/lorito_picada_paraguay.jpg">../samples/lorito_picada_paraguay.jpg</file>
+        <file alias="docs/README.md">../../README.md</file>
+        <file alias="docs/ARCHITECTURE.md">../../docs/ARCHITECTURE.md</file>
+        <file alias="docs/BUILDING.md">../../docs/BUILDING.md</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <!-- Top toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bg_surface"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/accent_amber"
+        app:menu="@menu/top_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Indicador de fase (visible solo en flujo 3 fases) -->
+    <LinearLayout
+        android:id="@+id/phase_bar"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:background="@color/bg_surface"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout android:id="@+id/phase_1"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:gravity="center" android:paddingTop="2dp">
+            <TextView android:id="@+id/tv_phase_1"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="CAPTURA" android:textSize="9sp" android:textStyle="bold"
+                android:letterSpacing="0.08" android:textColor="@color/text_secondary" />
+            <View android:id="@+id/line_phase_1"
+                android:layout_width="match_parent" android:layout_height="3dp"
+                android:layout_marginTop="4dp" android:layout_marginHorizontal="8dp"
+                android:background="#33FFFFFF" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+            android:text="›" android:textColor="#44FFFFFF" android:textSize="14sp" android:gravity="center" />
+
+        <LinearLayout android:id="@+id/phase_2"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:gravity="center" android:paddingTop="2dp">
+            <TextView android:id="@+id/tv_phase_2"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="EDICIÓN" android:textSize="9sp" android:textStyle="bold"
+                android:letterSpacing="0.08" android:textColor="@color/text_secondary" />
+            <View android:id="@+id/line_phase_2"
+                android:layout_width="match_parent" android:layout_height="3dp"
+                android:layout_marginTop="4dp" android:layout_marginHorizontal="8dp"
+                android:background="#33FFFFFF" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+            android:text="›" android:textColor="#44FFFFFF" android:textSize="14sp" android:gravity="center" />
+
+        <LinearLayout android:id="@+id/phase_3"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:gravity="center" android:paddingTop="2dp">
+            <TextView android:id="@+id/tv_phase_3"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="ANOTACIÓN" android:textSize="9sp" android:textStyle="bold"
+                android:letterSpacing="0.08" android:textColor="@color/text_secondary" />
+            <View android:id="@+id/line_phase_3"
+                android:layout_width="match_parent" android:layout_height="3dp"
+                android:layout_marginTop="4dp" android:layout_marginHorizontal="8dp"
+                android:background="#33FFFFFF" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Navigation host -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
+        app:layout_constraintTop_toBottomOf="@id/phase_bar"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bottom navigation bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_surface"
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:itemTextColor="@color/bottom_nav_selector"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

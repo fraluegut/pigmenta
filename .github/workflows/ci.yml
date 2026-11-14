@@ -1,0 +1,59 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  core-cli-desktop:
+    name: core + cli + desktop (CMake)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Qt6
+        run: sudo apt-get update && sudo apt-get install -y qt6-base-dev
+      - name: Configure
+        run: cmake -B build -S .
+      - name: Build
+        run: cmake --build build --config Release
+      - name: Smoke test
+        run: ./build/cli/pigmenta-cli || true
+
+  tests-and-coverage:
+    name: unit tests + core/ coverage gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Qt6 + gcovr
+        run: sudo apt-get update && sudo apt-get install -y qt6-base-dev gcovr bc xvfb
+      - name: Run tests + coverage gate
+        run: ./scripts/check_coverage.sh
+
+  pre-commit:
+    name: pre-commit (format, hygiene)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - uses: pre-commit/action@v3.0.1
+        env:
+          # Covered by the dedicated tests-and-coverage job above, which has
+          # the Qt6/gcovr toolchain this hook needs — skip it here.
+          SKIP: pigmenta-core-coverage
+
+  android:
+    name: android (Gradle)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - name: Grant execute permission
+        run: chmod +x android/gradlew
+      - name: Build debug APK
+        run: cd android && ./gradlew assembleDebug

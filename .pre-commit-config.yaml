@@ -1,0 +1,39 @@
+exclude: ^(android/|cli/third_party/)
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-merge-conflict
+      - id: mixed-line-ending
+      - id: check-added-large-files
+        args: [--maxkb=2048]
+      - id: check-case-conflict
+      - id: check-yaml
+
+  - repo: https://github.com/pre-commit/mirrors-clang-format
+    rev: v18.1.3
+    hooks:
+      - id: clang-format
+        files: \.(cpp|h)$
+        # Hand-aligned numeric matrices — clang-format would collapse the
+        # deliberate column alignment of the coefficients into unreadable
+        # single-spaced math. See docs/TESTING.md.
+        exclude: >
+          (?x)^(
+            core/src/color_spaces\.cpp|
+            core/src/decorrelation\.cpp|
+            core/src/filters\.cpp|
+            core/include/pigmenta/matrix3x3\.h
+          )$
+
+  - repo: local
+    hooks:
+      - id: pigmenta-core-coverage
+        name: pigmenta core/ unit tests + 100% line coverage gate
+        entry: scripts/check_coverage.sh
+        language: script
+        pass_filenames: false
+        files: ^(core|cli|desktop)/

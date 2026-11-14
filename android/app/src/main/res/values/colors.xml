@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background palette (dark archaeological theme) -->
+    <color name="bg_dark">#0D0D0D</color>
+    <color name="bg_surface">#1A1A1A</color>
+    <color name="bg_elevated">#242424</color>
+
+    <!-- Accent — amber/ochre (archaeological pigment reference) -->
+    <color name="accent_amber">#E8A32A</color>
+    <color name="accent_amber_dim">#A06A10</color>
+
+    <!-- Text -->
+    <color name="text_primary">#F0EDE4</color>
+    <color name="text_secondary">#9E9B93</color>
+
+    <!-- Bottom nav selector states handled programmatically -->
+    <color name="nav_selected">#E8A32A</color>
+    <color name="nav_unselected">#9E9B93</color>
+    <!-- Launcher icon background -->
+    <color name="ic_launcher_background">#000000</color>
+</resources>
